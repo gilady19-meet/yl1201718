@@ -1,0 +1,25 @@
+from turtle import *
+import random
+colormode(255)
+red=random.randint(0 ,255)
+blue=random.randint(0 ,255)
+green=random.randint(0 ,255)
+
+class Square(Turtle):
+	def __init__(self, size, speed):
+		turtle.__init__(self)
+		self.shapesize(10)
+		self.speed(speed)
+		self.begin_poly()
+		self.shape("square")
+		self.size = size
+		self.color(red, green, blue)
+		self.begin_fill()
+		def random_color(self, color):
+			self.color("blue")
+
+Square1=Square(10)
+Square1.random_color() 
+print(Square1)
+
+mainloop()
