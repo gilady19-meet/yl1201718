@@ -7,6 +7,8 @@ class Ball(Turtle):
 		Turtle.__init__(self)
 		self.pu()
 		self.goto(x, y)
+		self.x=x
+		self.y=y
 		self.dx=dx
 		self.dy=dy
 		self.radius=radius
@@ -15,13 +17,13 @@ class Ball(Turtle):
 		self.color(color)
 	def move(self , screen_width, screen_height):
 		current_x=self.xcor()
-		new_x=current_x+dx
+		new_x=current_x+self.dx
 		current_y=self.ycor()
-		new_y=current_y+dy
-		right_side_ball=new_x+radius
-		left_side_ball=new_x-radius
-		up_side_ball=new_y+radius
-		bottom_side_ball=new_y-radius
+		new_y=current_y+self.dy
+		right_side_ball=new_x+self.radius
+		left_side_ball=new_x-self.radius
+		up_side_ball=new_y+self.radius
+		bottom_side_ball=new_y-self.radius
 		self.goto(new_x ,new_y)
 		if right_side_ball>=screen_width or left_side_ball<= - screen_width:
 			print("problem")
