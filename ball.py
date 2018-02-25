@@ -32,3 +32,5 @@ class Ball(Turtle):
 			print("problem")
 			self.dy=-self.dy
 
+	def __str__(self):
+		return "" + str(self.radius) +"\t"+ str(self.color()) +"\t"+ str(self.xcor()) +"\t"+ str(self.ycor()) +"\t"+ str(self.dx) +"\t"+ str(self.dy) 

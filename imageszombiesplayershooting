@@ -1,0 +1,7 @@
+snake = turtle.clone()
+snake.shape("square")
+snake.color('darkblue')
+turtle.register_shape("trash.gif")
+
+food = turtle.clone()
+food.shape("trash.gif")
